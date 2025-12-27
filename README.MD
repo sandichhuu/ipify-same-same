@@ -18,4 +18,4 @@ Chat with me, I can share you some without any fee.
 But please don't spam the API.
 
 Test:
-![Test case v4/default]('test.png')
+![Test case v4/default](test.png)
