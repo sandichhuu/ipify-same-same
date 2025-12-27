@@ -40,11 +40,14 @@ curl http://your-server-ip/v4   # ← IPv4
 curl http://your-server-ip/v6   # ← IPv6
 ```
 
-Not working ?
+# Not working ?
+
 If nginx is running, we need checking the configuration files and make sure they have:
+```
 proxy_set_header X-Forwarded-For $remote_addr;
 proxy_set_header X-Real-IP       $remote_addr;
 proxy_set_header Host            $host;
+```
 
 📈 Why Use This Service?
 No static IP needed – The service will always return your current public address, making dynamic DNS updates trivial.
