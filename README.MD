@@ -9,25 +9,36 @@ Ideal for low‑power servers, VPN routers or any environment where a static IP 
 Use tool like WinSCP to connect, then drag and drop the downloaded image into any where you want.
 
 # Load the image
+```
 docker load -i ipify.tar
+```
 
 # After load, you can remove the tar file
+```
 rmi ipify.tar
+```
 
 # Run the container (internal port 8080, host port 80 or whatever you want)
+```
 docker run -d --name ip-provider -p 80:8080 ipify:latest
+```
 After the image is loaded you’ll only see ~12 MB on disk.
 
 You can now access:
 
 Endpoint	Description
-/v4	Returns the current public IPv4 address
-/v6	Returns the current public IPv6 address
-/	Alias for /v4 (default)
-Example:
 
+/v4	Returns the current public IPv4 address
+
+/v6	Returns the current public IPv6 address
+
+/	Alias for /v4 (default)
+
+Example:
+```
 curl http://your-server-ip/v4   # ← IPv4
 curl http://your-server-ip/v6   # ← IPv6
+```
 
 Not working ?
 If nginx is running, we need checking the configuration files and make sure they have:
@@ -53,8 +64,7 @@ I can share free resources, but please do not spam the API.
 Respectful usage ensures continued community support.
 
 📄 License
-FREE FOREVER, OPEN SOURCE, FREE FOR EDIT, FREE FOR COMMERCIAL PUPOSE.
-FREE FREE FREE without License.
+FREE for any purpose without License.
 
 Test:
 ![Test case v4/default](test.png)
