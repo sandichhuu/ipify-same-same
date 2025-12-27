@@ -50,24 +50,37 @@ proxy_set_header Host            $host;
 ```
 
 📈 Why Use This Service?
+
 No static IP needed – The service will always return your current public address, making dynamic DNS updates trivial.
+
 Simple integration with DDNS clients – Update your DNS zone with tools like ddclient, ddns-updater, or any custom script.
+
 Fast & Small – AOT compilation reduces startup time and keeps the Docker image lightweight (≈12 MB).
+
 Cross‑platform – Run on any Linux distribution, even low‑powered VPS or embedded devices.
 
 💡 Use‑Case Scenarios
+
 Scenario	How the service helps
+
 Low‑power VPS	Provides a single IP endpoint for scripts and services.
+
 Dynamic DNS	Supplies a stable source for any DDNS updater.
+
 Remote access	Exposes your server’s public IP for NAT‑traversal tools.
 
 🤝 Need a Server?
+
 If you don’t have a dedicated machine, feel free to message me.
+
 I can share free resources, but please do not spam the API.
+
 Respectful usage ensures continued community support.
 
 📄 License
+
 FREE for any purpose without License.
 
 Test:
+
 ![Test case v4/default](test.png)
